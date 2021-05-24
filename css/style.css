@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
+.w3-Tegomin,p{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+.w3-Tegomin1,h1,h2,h3,h4,h5,h6{
+  font-family: 'Bitter', serif !important;
+}
+.w3-container {
+  border-radius: 15px;
+}
+.w3-row-padding img {
+  margin-bottom: 12px;
+}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {
+  width: 120px;
+  background: #222;
+}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {
+  margin-left: 120px;
+  background-color: #303030;
+}
+@keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-webkit-keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-moz-keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-o-keyframes load{
+  from {
+    width: 0%
+  }
+}
+.bar{
+  background-color: #EEE;
+  border-radius: px;
+  font-size: 1.5px;
+  color: #FFF;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+.bar::before{
+  content:  attr(data-skill);
+  background-color: red;
+  display: inline-block;
+  padding: 5px 0 5px 10px;
+  height: 28px;
+  width: 85%;
+  border-radius: inherit;
+  animation: load 2s 0s;
+  -webkit-animation: load 3s 0s;
+  -moz-animation: load 2s 0s;
+  -o-animation: load 2s 0s;
+}
+
+.bar.front::before{
+  background-color: #96803f;
+}
+.bar.back::before{
+  background-color: #a6cfe3;
+}
+
+.bar.learning::before{
+  width: calc(95% - 2px);
+}
+.bar.basic::before{
+  width: calc(85% - 10px);
+  background-color: orange;
+}
+.bar.intermediate::before{
+  width: calc(80% - 10px);
+  background-color: yellow;
+}
+.bar.advanced::before{
+  width: calc(80% - 10px);
+  background-color: cyan;
+}
+.bar.expert::before{
+  width: calc(80% - 10px);
+  background-color: lightgreen;
+}
+.bar.expert2::before{
+  width: calc(80% - 10px);
+  background-color: purple;
+
+}
+
+
+
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {
+  #main {
+    margin-left: 0;
+  }
+}
+
